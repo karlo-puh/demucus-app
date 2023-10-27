@@ -23,5 +23,5 @@ if uploaded_audio is not None:
     
     if st.button("Separate Vocals"):
         separated_vocals, separated_instrumental = inference(audio_data)
-        st.audio(separated_vocals, format="audio/wav", start_time=0, key="vocals")
-        st.audio(separated_instrumental, format="audio/wav", start_time=0, key="instrumental")
+        st.audio(separated_vocals, format="audio/wav", start_time=0)
+        st.audio(separated_instrumental, format="audio/wav", start_time=0)
