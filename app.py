@@ -19,5 +19,5 @@ if audio_input is not None:
     vocals_path = "./out/htdemucs/test/vocals.wav"
     no_vocals_path = "./out/htdemucs/test/no_vocals.wav"
 
-    st.audio(vocals_path, format="audio/wav", label="Vocals")
-    st.audio(no_vocals_path, format="audio/wav", label="No Vocals / Instrumental")
+    st.audio(vocals_path, format="audio/wav")
+    st.audio(no_vocals_path, format="audio/wav")
