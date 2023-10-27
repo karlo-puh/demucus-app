@@ -8,7 +8,7 @@ st.markdown("Music Source Separation in the Waveform Domain | [Github Repo](http
 
 audio_input = st.file_uploader("Upload an audio file", type=["wav"])
 
-if audio_input is not None:
+if st.button("Process"):
     os.makedirs("out", exist_ok=True)
     with open('test.wav', 'wb') as audio_file:
         audio_file.write(audio_input.read())
@@ -18,6 +18,3 @@ if audio_input is not None:
 
     vocals_path = "./out/htdemucs/test/vocals.wav"
     no_vocals_path = "./out/htdemucs/test/no_vocals.wav"
-
-    st.audio(vocals_path, format="audio/wav")
-    st.audio(no_vocals_path, format="audio/wav")
