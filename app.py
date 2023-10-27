@@ -9,7 +9,7 @@ def inference(audio_data):
         audio_file.write(audio_data)
     
     # Perform separation here (replace this line with your separation code)
-    # os.system("python3 -m demucs.separate -n htdemucs --two-stems=vocals test.wav -o out")
+    os.system("python3 -m demucs.separate -n htdemucs --two-stems=vocals test.wav -o out")
     
     return "./out/htdemucs/test/vocals.wav", "./out/htdemucs/test/no_vocals.wav"
 
